@@ -7,4 +7,10 @@
 - `assets/logo-modec.png` — coloque aqui o logo oficial (opcional; sem ele aparece o texto MODEC)
 - `ROADMAP.md` — plano por fases
 
-Funciona abrindo `index.html` direto ou publicado (GitHub Pages).
+## Links
+- Equipe (Marinha): https://controledemateriaismodec.pages.dev
+- Atualização (restrito, com login): https://controledemateriaismodec.pages.dev/admin.html
+
+Hospedagem: Cloudflare Pages ligado a este repositório (branch `main`, sem build, pasta raiz). Cada publicação no botão "Atualizar dados" grava `data.js` aqui e o site atualiza em ~1 minuto.
+
+Funciona também abrindo `index.html` direto no computador.

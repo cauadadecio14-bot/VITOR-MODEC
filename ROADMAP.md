@@ -27,7 +27,7 @@ Objetivo: o time de Marinha a bordo abre **um link**, filtra por **nome** ou **c
 
 ### Fase 3 — Publicação do link (a fazer, ~15 min)
 - [ ] Colocar o logo oficial em `assets/logo-modec.png` (PNG branco/transparente, ~40 px de altura)
-- [ ] Ativar GitHub Pages no repositório → link `…/modec-materiais/`
+- [x] Publicado no Cloudflare Pages → https://controledemateriaismodec.pages.dev
 - [ ] Rotina: importar planilha em `admin.html` → substituir `data.js` no GitHub → link atualizado
 
 ### Fase 4 — Melhorias sugeridas (a validar com você)

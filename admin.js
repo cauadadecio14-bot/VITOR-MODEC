@@ -136,7 +136,7 @@
       var html = t[0]
         .replace(/\s*<a class="rodape__acao"[\s\S]*?<\/a>/, '')
         .replace('<link rel="stylesheet" href="styles.css">', function () { return '<style>\n' + t[1] + '\n</style>'; })
-        .replace('<script src="data.js"></script>', function () { return '<script>\n' + dados + '</script>'; })
+        .replace(/<script>document\.write\('<script src="data\.js[^\n]*<\/script>/, function () { return '<script>\n' + dados + '</script>'; })
         .replace('<script src="app.js"></script>', function () { return '<script>\n' + t[2].replace(/<\/script/gi, '<\\/script') + '\n</script>'; });
       baixar('consulta-materiais-marinha.html', html, 'text/html');
       $('msg').textContent = 'Arquivo gerado. Ele funciona offline, mas não se atualiza sozinho — prefira o link oficial.';

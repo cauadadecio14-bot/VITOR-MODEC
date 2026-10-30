@@ -27,6 +27,8 @@ body {
 .marca__txt { font-weight: 800; font-size: 28px; letter-spacing: .16em; }
 .marca__img:not([hidden]) + .marca__txt { display: none; }
 .topo__titulo { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.28); }
+.topo__acao { margin-left: auto; flex: none; color: var(--branco); text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 14px; border: 1px solid rgba(255,255,255,.55); border-radius: 8px; }
+.topo__acao:hover, .topo__acao:focus-visible { background: var(--vermelho); border-color: var(--vermelho); outline: none; }
 .topo__titulo h1 { margin: 0; font-size: 20px; font-weight: 600; }
 .topo__titulo p { margin: 2px 0 0; font-size: 13px; color: #c3d2ea; }
 
@@ -90,6 +92,8 @@ td.atrasado small { font-weight: 400; }
   .marca__img { height: 28px; padding: 6px 10px; }
   .marca__txt { font-size: 22px; }
   .topo__titulo h1 { font-size: 16px; }
+  .topo__in { flex-wrap: wrap; }
+  .topo__acao { margin-left: 0; width: 100%; text-align: center; }
   .modo { display: flex; }
   .modo__op { flex: 1; padding: 10px 8px; }
   thead { position: absolute; left: -9999px; }

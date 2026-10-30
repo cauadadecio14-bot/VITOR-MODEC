@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Atualizar Planilha | Materiais Marinha</title>
+<title>Atualizar Dados | Materiais Marinha</title>
 <link rel="stylesheet" href="styles.css">
 <style>
   .passos { margin: 0 0 18px; padding-left: 20px; color: var(--mudo); font-size: 14px; }
@@ -27,40 +27,79 @@
   .previa { overflow-x: auto; margin-top: 16px; border: 1px solid var(--borda); border-radius: var(--raio); }
   .previa td, .previa th { font-size: 14px; padding: 8px 12px; white-space: nowrap; }
   .previa td:first-child { white-space: normal; }
-  #previa-box[hidden], #acoes-box[hidden] { display: none; }
+  #previa-box[hidden], #acoes-box[hidden], .tela[hidden] { display: none; }
+  .form { display: grid; gap: 12px; max-width: 380px; }
+  .form label { font-size: 13px; font-weight: 600; color: var(--azul); display: grid; gap: 4px; }
+  .form input { font: inherit; font-size: 16px; padding: 11px 12px; border: 2px solid var(--borda); border-radius: 8px; }
+  .form input:focus { border-color: var(--azul); outline: none; }
+  .sair { float: right; font: inherit; font-size: 13px; background: none; border: 0; color: var(--azul); text-decoration: underline; cursor: pointer; }
+  .ok { background: #e3f4ea; border: 1px solid #b7e0c6; border-left: 5px solid #146c3a; border-radius: 8px; padding: 12px 16px; margin-top: 14px; color: #146c3a; }
+  .ok[hidden] { display: none; }
+  .nota { font-size: 13px; color: var(--mudo); }
   @media (max-width: 640px) { .previa thead { position: static; } .previa tr { display: table-row; padding: 0; } .previa td { display: table-cell; text-align: left; } .previa td::before { content: none; } }
 </style>
 </head>
 <body>
 <header class="topo">
   <div class="topo__in">
-    <a class="marca" href="./" aria-label="MODEC"><span class="marca__txt">MODEC</span></a>
-    <div class="topo__titulo"><h1>Atualizar planilha</h1><p>Área do administrador · Materiais Marinha</p></div>
+    <a class="marca" href="./" aria-label="MODEC"><img class="marca__img" src="assets/logo-modec.png" alt="MODEC" hidden><span class="marca__txt">MODEC</span></a>
+    <div class="topo__titulo"><h1>Atualizar dados</h1><p>Área restrita · Materiais Marinha</p></div>
   </div>
 </header>
 
 <main class="pagina">
-  <section class="busca">
-    <h2>Importar Follow up</h2>
+  <section class="busca tela" id="tela-login" hidden>
+    <h2>Entrar</h2>
+    <form class="form" id="form-login" autocomplete="on">
+      <label>Usuário <input id="login-user" autocomplete="username" required></label>
+      <label>Senha <input id="login-senha" type="password" autocomplete="current-password" required></label>
+      <button class="btn" type="submit">Entrar</button>
+    </form>
+    <div id="login-erro" class="erro" hidden></div>
+  </section>
+
+  <section class="busca tela" id="tela-setup" hidden>
+    <h2>Primeiro acesso — criar login</h2>
+    <ol class="passos">
+      <li>No GitHub: <strong>Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token</strong>.</li>
+      <li>Em “Repository access”, escolha <strong>Only select repositories → VITOR-MODEC</strong>. Em “Permissions → Repository permissions”, deixe <strong>Contents: Read and write</strong>.</li>
+      <li>Cole o token abaixo e escolha um usuário e uma <strong>senha forte</strong> (mínimo 10 caracteres). O token é criptografado com a sua senha.</li>
+      <li>Será baixado o arquivo <code>acesso.js</code>: envie-o para o repositório (Add file → Upload files). Depois disso o login funciona de qualquer computador.</li>
+    </ol>
+    <form class="form" id="form-setup" autocomplete="off">
+      <label>Token do GitHub <input id="setup-token" type="password" required></label>
+      <label>Usuário <input id="setup-user" required></label>
+      <label>Senha <input id="setup-senha" type="password" minlength="10" required></label>
+      <button class="btn" type="submit">Criar acesso</button>
+    </form>
+    <div id="setup-erro" class="erro" hidden></div>
+    <div id="setup-ok" class="ok" hidden></div>
+  </section>
+
+  <section class="busca tela" id="tela-painel" hidden>
+    <button class="sair" id="sair" type="button">Sair</button>
+    <h2>Atualizar dados</h2>
     <ol class="passos">
       <li><strong>Selecione</strong> a planilha .xlsx atualizada (aba “Marinha”).</li>
       <li><strong>Confira</strong> o resumo e os avisos abaixo.</li>
-      <li><strong>Baixe o data.js</strong> e substitua o arquivo <code>data.js</code> no GitHub — o link da equipe se atualiza sozinho.</li>
+      <li>Clique em <strong>Publicar</strong>: o link da equipe é atualizado em cerca de 1 minuto.</li>
     </ol>
 
     <label class="drop" id="drop">
       <input type="file" id="arquivo" accept=".xlsx,.xlsm,.xls">
       <span id="drop-txt">Clique ou arraste a planilha aqui</span>
-      <small>O arquivo é lido no seu navegador; nada é enviado a servidores.</small>
+      <small>O arquivo é lido no seu navegador; só os dados dos materiais são publicados.</small>
     </label>
     <div id="erro" class="erro" hidden></div>
+    <div id="ok" class="ok" hidden></div>
 
     <div id="acoes-box" hidden>
       <div class="resumo" id="resumo"></div>
       <div id="avisos"></div>
       <div class="acoes">
-        <button class="btn" id="baixar-data">Baixar data.js</button>
-        <button class="btn btn--sec" id="baixar-html">Baixar HTML único (para enviar por e-mail/WhatsApp)</button>
+        <button class="btn" id="publicar">Publicar</button>
+        <button class="btn btn--sec" id="baixar-data">Baixar data.js</button>
+        <button class="btn btn--sec" id="baixar-html">Baixar HTML único</button>
       </div>
       <p class="msg" id="msg"></p>
     </div>
@@ -76,6 +115,7 @@
 
 <script src="vendor/xlsx.full.min.js"></script>
 <script src="normalizar.js"></script>
+<script src="acesso.js"></script>
 <script src="admin.js"></script>
 </body>
 </html>

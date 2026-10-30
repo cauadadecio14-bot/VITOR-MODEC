@@ -147,6 +147,9 @@
 
   // Logo e tela inicial
   var logo = document.querySelector('.marca__img');
-  if (logo) logo.addEventListener('load', function () { logo.hidden = false; });
+  if (logo) {
+    logo.addEventListener('load', function () { logo.hidden = false; });
+    if (logo.complete && logo.naturalWidth) logo.hidden = false;
+  }
   tela(window.ACESSO && window.ACESSO.d ? 'tela-login' : 'tela-setup');
 })();

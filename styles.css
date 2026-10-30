@@ -21,11 +21,12 @@ body {
 /* Topo */
 .topo { background: var(--azul); color: var(--branco); border-bottom: 4px solid var(--vermelho); }
 .topo__in { max-width: 960px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; gap: 20px; }
-.marca { display: flex; align-items: center; text-decoration: none; color: inherit; flex: none; padding-right: 20px; border-right: 1px solid rgba(255,255,255,.28); }
-.marca__img { height: 38px; width: auto; display: block; }
+.marca { display: flex; align-items: center; text-decoration: none; color: inherit; flex: none; }
+.marca__img { height: 40px; width: auto; display: block; background: var(--branco); padding: 8px 14px; border-radius: 8px; box-sizing: content-box; }
 .marca__img[hidden] { display: none; }
 .marca__txt { font-weight: 800; font-size: 28px; letter-spacing: .16em; }
 .marca__img:not([hidden]) + .marca__txt { display: none; }
+.topo__titulo { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.28); }
 .topo__titulo h1 { margin: 0; font-size: 20px; font-weight: 600; }
 .topo__titulo p { margin: 2px 0 0; font-size: 13px; color: #c3d2ea; }
 
@@ -83,7 +84,8 @@ td.nulo { color: #98a5bb; }
 
 @media (max-width: 640px) {
   .topo__in { gap: 14px; }
-  .marca { padding-right: 14px; }
+  .topo__titulo { padding-left: 14px; }
+  .marca__img { height: 28px; padding: 6px 10px; }
   .marca__txt { font-size: 22px; }
   .topo__titulo h1 { font-size: 16px; }
   .modo { display: flex; }

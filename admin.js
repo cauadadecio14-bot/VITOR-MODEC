@@ -134,7 +134,7 @@
     })).then(function (t) {
       var dados = Normalizar.gerarDataJs(atual.registros).replace(/<\/script/gi, '<\\/script');
       var html = t[0]
-        .replace(/\s*<a class="topo__acao"[^>]*>.*?<\/a>/, '')
+        .replace(/\s*<a class="rodape__acao"[\s\S]*?<\/a>/, '')
         .replace('<link rel="stylesheet" href="styles.css">', function () { return '<style>\n' + t[1] + '\n</style>'; })
         .replace('<script src="data.js"></script>', function () { return '<script>\n' + dados + '</script>'; })
         .replace('<script src="app.js"></script>', function () { return '<script>\n' + t[2].replace(/<\/script/gi, '<\\/script') + '\n</script>'; });

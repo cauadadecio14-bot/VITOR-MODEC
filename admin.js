@@ -98,7 +98,7 @@
     $('avisos').innerHTML = res.avisos.length
       ? '<div class="avisos"><b>' + res.avisos.length + ' ponto(s) para conferir na planilha:</b><ul>' + res.avisos.map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ul></div>' : '';
     $('previa').innerHTML = res.registros.map(function (r) {
-      return '<tr><td>' + esc(r.nome) + '</td><td>' + esc(r.codigo) + '</td><td>' + esc(r.pr) + '</td><td>' + esc(r.po) +
+      return '<tr><td class="num linha">' + r.linha + '</td><td>' + esc(r.nome) + '</td><td>' + esc(r.codigo) + '</td><td>' + esc(r.pr) + '</td><td>' + esc(r.po) +
         '</td><td class="num">' + esc(r.qtd) + '</td><td>' + esc(r.eta ? r.eta.split('-').reverse().join('/') : '') + '</td><td><span class="status status--' + r.tom + '">' + esc(r.status) + '</span></td></tr>';
     }).join('');
     $('msg').textContent = '';

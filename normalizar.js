@@ -71,6 +71,7 @@
       var data = col.eta !== undefined ? lerData(l[col.eta]) : {};
       if (data.erro) avisos.push(rotulo + ': ETA não importado — ' + data.erro + '.');
       registros.push({
+        linha: r + 1,
         codigo: codigo,
         nome: nome,
         qtd: limpar(l[col.qtd]),
@@ -87,7 +88,7 @@
   function gerarDataJs(registros) {
     return 'window.MATERIAIS = ' + JSON.stringify({
       atualizadoEm: new Date().toISOString(),
-      registros: registros
+      registros: registros.map(function (x) { var c = {}; for (var k in x) if (k !== 'linha') c[k] = x[k]; return c; })
     }, null, 1) + ';\n';
   }
 

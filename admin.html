@@ -26,7 +26,8 @@
   .msg { font-size: 14px; color: var(--mudo); margin: 8px 0 0; }
   .previa { overflow-x: auto; margin-top: 16px; border: 1px solid var(--borda); border-radius: var(--raio); }
   .previa td, .previa th { font-size: 14px; padding: 8px 12px; white-space: nowrap; }
-  .previa td:first-child { white-space: normal; }
+  .previa td.linha { color: var(--mudo); font-weight: 600; width: 1%; }
+  .previa td:nth-child(2) { white-space: normal; }
   #previa-box[hidden], #acoes-box[hidden], .tela[hidden] { display: none; }
   .form { display: grid; gap: 12px; max-width: 380px; }
   .form label { font-size: 13px; font-weight: 600; color: var(--azul); display: grid; gap: 4px; }
@@ -107,7 +108,7 @@
 
   <section id="previa-box" hidden>
     <div class="previa">
-      <table><thead><tr><th>Material</th><th>Código</th><th>PR</th><th>PO</th><th class="num">Qtd.</th><th>ETA</th><th>Status</th></tr></thead><tbody id="previa"></tbody></table>
+      <table><thead><tr><th class="num">Linha</th><th>Material</th><th>Código</th><th>PR</th><th>PO</th><th class="num">Qtd.</th><th>ETA</th><th>Status</th></tr></thead><tbody id="previa"></tbody></table>
     </div>
   </section>
 </main>

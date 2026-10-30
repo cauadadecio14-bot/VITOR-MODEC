@@ -1,5 +1,5 @@
 window.MATERIAIS = {
- "atualizadoEm": "2026-10-30T05:14:31.486Z",
+ "atualizadoEm": "2026-10-30T12:13:49.989Z",
  "registros": [
   {
    "codigo": "610000424529",
@@ -378,6 +378,16 @@ window.MATERIAIS = {
    "pr": "3000076860",
    "po": "5100023162",
    "eta": "2026-09-22",
+   "status": "Aguardando entrega",
+   "tom": "espera"
+  },
+  {
+   "codigo": "610000061055",
+   "nome": "FLARE SIGNAL, PYROTECH; RD; 40S; 300M",
+   "qtd": "40",
+   "pr": "",
+   "po": "4500294494",
+   "eta": "2026-10-01",
    "status": "Aguardando entrega",
    "tom": "espera"
   }

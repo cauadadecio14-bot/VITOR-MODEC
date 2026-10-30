@@ -37,7 +37,7 @@
       ? '<div class="avisos"><b>' + res.avisos.length + ' ponto(s) para conferir na planilha:</b><ul>' + res.avisos.map(function (a) { return '<li>' + esc(a) + '</li>'; }).join('') + '</ul></div>' : '';
     $('previa').innerHTML = res.registros.map(function (r) {
       return '<tr><td>' + esc(r.nome) + '</td><td>' + esc(r.codigo) + '</td><td>' + esc(r.pr) + '</td><td>' + esc(r.po) +
-        '</td><td class="num">' + esc(r.qtd) + '</td><td><span class="status status--' + r.tom + '">' + esc(r.status) + '</span></td></tr>';
+        '</td><td class="num">' + esc(r.qtd) + '</td><td>' + esc(r.eta ? r.eta.split('-').reverse().join('/') : '') + '</td><td><span class="status status--' + r.tom + '">' + esc(r.status) + '</span></td></tr>';
     }).join('');
     $('msg').textContent = '';
     $('acoes-box').hidden = false; $('previa-box').hidden = false;

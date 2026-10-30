@@ -16,6 +16,23 @@
     return String(v).replace(/[ ​]/g, ' ').replace(/\s+/g, ' ').trim();
   }
 
+  // Converte a célula de ETA (serial do Excel, "MM/DD/AAAA" ou "DD.MM.AAAA") em "AAAA-MM-DD"
+  function lerData(v) {
+    var y, m, d;
+    if (typeof v === 'number' && isFinite(v)) {
+      var dt = new Date(Math.round((v - 25569) * 86400000));
+      y = dt.getUTCFullYear(); m = dt.getUTCMonth() + 1; d = dt.getUTCDate();
+    } else {
+      var t = limpar(v), x;
+      if ((x = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(t))) { m = +x[1]; d = +x[2]; y = +x[3]; }
+      else if ((x = /^(\d{1,2})\.(\d{1,2})\.(\d{4})$/.exec(t))) { d = +x[1]; m = +x[2]; y = +x[3]; }
+      else return { erro: t ? 'formato de data não reconhecido "' + t + '"' : '' };
+    }
+    if (m < 1 || m > 12 || d < 1 || d > 31) return { erro: 'data inválida' };
+    if (y < 2000 || y > 2100) return { erro: 'ano suspeito (' + y + ')' };
+    return { iso: y + '-' + ('0' + m).slice(-2) + '-' + ('0' + d).slice(-2) };
+  }
+
   function normalizarPlanilha(XLSX, dados) {
     var wb = XLSX.read(dados, { type: 'array' });
     var aba = wb.Sheets['Marinha'] ? 'Marinha' : wb.SheetNames[0];
@@ -33,6 +50,7 @@
         else if (k === 'pr') m.pr = j;
         else if (k === 'po') m.po = j;
         else if (k === 'status') m.status = j;
+        else if (k === 'eta') m.eta = j;
       });
       if (m.codigo !== undefined && m.pr !== undefined && m.po !== undefined && m.status !== undefined) { cab = i; col = m; }
     }
@@ -50,12 +68,15 @@
       if (!bruto) avisos.push(rotulo + ': sem status.');
       else if (!st) avisos.push(rotulo + ': status desconhecido "' + bruto + '" (mantido como veio).');
       if (!codigo) avisos.push(rotulo + ': sem código de material.');
+      var data = col.eta !== undefined ? lerData(l[col.eta]) : {};
+      if (data.erro) avisos.push(rotulo + ': ETA não importado — ' + data.erro + '.');
       registros.push({
         codigo: codigo,
         nome: nome,
         qtd: limpar(l[col.qtd]),
         pr: limpar(l[col.pr]),
         po: limpar(l[col.po]),
+        eta: data.iso || '',
         status: st ? st[0] : (bruto || 'Sem status'),
         tom: st ? st[1] : 'neutro'
       });

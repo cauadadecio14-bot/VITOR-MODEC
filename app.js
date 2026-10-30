@@ -104,6 +104,12 @@
     mostrar(o.valor);
   }
 
+  function fmtData(iso) {
+    var p = iso.split('-');
+    return p[2] + '/' + p[1] + '/' + p[0];
+  }
+  var HOJE = new Date().toISOString().slice(0, 10);
+
   function celula(v, rot, extra) {
     return '<td data-rot="' + rot + '"' + (v ? '' : ' class="nulo"') + (extra || '') + '>' + (v ? esc(v) : '—') + '</td>';
   }
@@ -123,17 +129,19 @@
     el.resultado.innerHTML = grupos.map(function (g) {
       return '<article class="grupo"><div class="grupo__cab"><h3>' + esc(g.nome || 'Sem descrição') + '</h3>' +
         '<span>Código ' + esc(g.codigo || '—') + '</span></div>' +
-        '<table><thead><tr><th>PR</th><th>PO</th><th class="num">Quantidade</th><th>Status</th></tr></thead><tbody>' +
+        '<table><thead><tr><th>PR</th><th>PO</th><th class="num">Quantidade</th><th>ETA</th><th>Status</th></tr></thead><tbody>' +
         g.linhas.map(function (r) {
           return '<tr>' + celula(r.pr, 'PR') + celula(r.po, 'PO') +
             '<td data-rot="Quantidade" class="num' + (r.qtd ? '' : ' nulo') + '">' + (r.qtd ? esc(r.qtd) : '—') + '</td>' +
+            '<td data-rot="ETA"' + (r.eta ? (r.eta < HOJE && r.tom !== 'ok' && r.tom !== 'base' && r.tom !== 'transito' ? ' class="atrasado"' : '') : ' class="nulo"') + '>' +
+              (r.eta ? fmtData(r.eta) + (r.eta < HOJE && r.tom !== 'ok' && r.tom !== 'base' && r.tom !== 'transito' ? ' <small>(vencida)</small>' : '') : '—') + '</td>' +
             '<td data-rot="Status"><span class="status status--' + esc(r.tom) + '">' + esc(r.status) + '</span></td></tr>';
         }).join('') + '</tbody></table></article>';
     }).join('');
   }
 
   function vazio() {
-    el.resultado.innerHTML = '<div class="vazio-msg">Selecione um material para ver PR, PO, quantidade e status.</div>';
+    el.resultado.innerHTML = '<div class="vazio-msg">Selecione um material para ver PR, PO, quantidade, ETA e status.</div>';
   }
 
   function trocarModo(novo) {

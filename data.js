@@ -1,5 +1,5 @@
 window.MATERIAIS = {
- "atualizadoEm": "2026-10-30T04:15:09.767Z",
+ "atualizadoEm": "2026-10-30T04:26:31.946Z",
  "registros": [
   {
    "codigo": "610000424529",
@@ -7,6 +7,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074818",
    "po": "4500292461",
+   "eta": "2026-08-31",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -16,6 +17,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074585",
    "po": "5100022234",
+   "eta": "2026-05-10",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -25,6 +27,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074583",
    "po": "5100022233",
+   "eta": "2026-07-10",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -34,6 +37,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074578",
    "po": "5100021859",
+   "eta": "2026-09-21",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -43,6 +47,7 @@ window.MATERIAIS = {
    "qtd": "8",
    "pr": "3000073834",
    "po": "4500290674",
+   "eta": "2026-08-17",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -52,6 +57,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074593",
    "po": "",
+   "eta": "",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -61,6 +67,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074579",
    "po": "5100021994",
+   "eta": "2026-09-28",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -70,6 +77,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074577",
    "po": "5100021994",
+   "eta": "2026-09-28",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -79,6 +87,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074820",
    "po": "",
+   "eta": "",
    "status": "Aguardando PO",
    "tom": "alerta"
   },
@@ -88,6 +97,7 @@ window.MATERIAIS = {
    "qtd": "1",
    "pr": "3000075596",
    "po": "4500294291",
+   "eta": "2026-12-13",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -97,6 +107,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "1000259926",
    "po": "4500297367",
+   "eta": "2026-12-11",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -106,6 +117,7 @@ window.MATERIAIS = {
    "qtd": "500L",
    "pr": "3000074580",
    "po": "4500295945",
+   "eta": "2026-10-30",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -115,6 +127,7 @@ window.MATERIAIS = {
    "qtd": "80",
    "pr": "3000075536",
    "po": "4500296731",
+   "eta": "2027-01-25",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -124,6 +137,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074591",
    "po": "4500297266",
+   "eta": "2026-11-16",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -133,6 +147,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074592",
    "po": "4500297269",
+   "eta": "2026-11-23",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -142,6 +157,7 @@ window.MATERIAIS = {
    "qtd": "4",
    "pr": "3000076763",
    "po": "",
+   "eta": "",
    "status": "Aguardando PO",
    "tom": "alerta"
   },
@@ -151,6 +167,7 @@ window.MATERIAIS = {
    "qtd": "50",
    "pr": "1000260598",
    "po": "4500295931",
+   "eta": "2026-11-16",
    "status": "Enviado a bordo",
    "tom": "transito"
   },
@@ -160,6 +177,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000075338",
    "po": "5100022512",
+   "eta": "2026-09-14",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -169,6 +187,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000076536",
    "po": "5100023057",
+   "eta": "2026-10-27",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -178,6 +197,7 @@ window.MATERIAIS = {
    "qtd": "500",
    "pr": "3000077187",
    "po": "4500294682",
+   "eta": "2026-09-22",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -187,6 +207,7 @@ window.MATERIAIS = {
    "qtd": "1",
    "pr": "3000073837",
    "po": "5100022105",
+   "eta": "2026-10-14",
    "status": "Na base B13G",
    "tom": "base"
   },
@@ -196,6 +217,7 @@ window.MATERIAIS = {
    "qtd": "2",
    "pr": "3000077188",
    "po": "4500293927",
+   "eta": "",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -205,6 +227,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "1000258155",
    "po": "5100022126",
+   "eta": "2026-09-14",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -214,6 +237,7 @@ window.MATERIAIS = {
    "qtd": "4",
    "pr": "3000073833",
    "po": "4500293493",
+   "eta": "2026-11-17",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -223,6 +247,7 @@ window.MATERIAIS = {
    "qtd": "1",
    "pr": "3000075597",
    "po": "4500293778",
+   "eta": "2026-10-21",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -232,6 +257,7 @@ window.MATERIAIS = {
    "qtd": "1",
    "pr": "3000075917",
    "po": "4500292348",
+   "eta": "2027-01-28",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -241,6 +267,7 @@ window.MATERIAIS = {
    "qtd": "1",
    "pr": "3000073831",
    "po": "5100022040",
+   "eta": "2026-10-13",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -250,6 +277,7 @@ window.MATERIAIS = {
    "qtd": "21",
    "pr": "3000073835",
    "po": "5100022040",
+   "eta": "2026-10-13",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -259,6 +287,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074586",
    "po": "4500292987",
+   "eta": "2027-09-28",
    "status": "Concluído",
    "tom": "ok"
   },
@@ -268,6 +297,7 @@ window.MATERIAIS = {
    "qtd": "40",
    "pr": "3000076941",
    "po": "4500294494",
+   "eta": "2026-10-01",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -277,6 +307,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000076537",
    "po": "4500294214",
+   "eta": "2026-11-30",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -286,6 +317,7 @@ window.MATERIAIS = {
    "qtd": "10",
    "pr": "3000073830",
    "po": "5100022040",
+   "eta": "2026-10-13",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -295,6 +327,7 @@ window.MATERIAIS = {
    "qtd": "1",
    "pr": "3000073838",
    "po": "5100022105",
+   "eta": "2026-10-14",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -304,6 +337,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000074093",
    "po": "4500290221",
+   "eta": "2026-10-08",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -313,6 +347,7 @@ window.MATERIAIS = {
    "qtd": "",
    "pr": "3000076941",
    "po": "4500294494",
+   "eta": "2026-10-01",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -322,6 +357,7 @@ window.MATERIAIS = {
    "qtd": "8",
    "pr": "1000264364",
    "po": "",
+   "eta": "",
    "status": "Aguardando PO",
    "tom": "alerta"
   },
@@ -331,6 +367,7 @@ window.MATERIAIS = {
    "qtd": "5",
    "pr": "1000264364",
    "po": "",
+   "eta": "",
    "status": "Aguardando PO",
    "tom": "alerta"
   },
@@ -340,6 +377,7 @@ window.MATERIAIS = {
    "qtd": "1",
    "pr": "3000076860",
    "po": "5100023162",
+   "eta": "2026-09-22",
    "status": "Aguardando entrega",
    "tom": "espera"
   }

@@ -1,6 +1,6 @@
 # Roadmap — Consulta de Materiais Marinha (MODEC)
 
-Objetivo: o time de Marinha a bordo abre **um link**, filtra por **nome** ou **código** e vê apenas **PR, PO, Quantidade e Status**. A planilha *Follow up* é atualizada regularmente por você.
+Objetivo: o time de Marinha a bordo abre **um link**, filtra por **nome** ou **código** e vê **PR, PO, Quantidade, ETA e Status**. A planilha *Follow up* é atualizada regularmente por você.
 
 ## Como o Power BI inspirou o desenho
 | Conceito no Power BI | Equivalente aqui |
@@ -31,10 +31,10 @@ Objetivo: o time de Marinha a bordo abre **um link**, filtra por **nome** ou **c
 - [ ] Rotina: importar planilha em `admin.html` → substituir `data.js` no GitHub → link atualizado
 
 ### Fase 4 — Melhorias sugeridas (a validar com você)
-- [ ] Exibir ETA (data prevista) — hoje fora porque o pedido foi só PR/PO/Qtd/Status
-- [ ] Corrigir datas suspeitas na planilha (ex.: ano 3036 no KIT; LIMP)
+- [x] ETA (data prevista) exibido na consulta; datas vencidas em vermelho
+- [ ] Corrigir datas suspeitas na planilha (ex.: ano 3036 no KIT; LIMP) — o importador avisa e não importa essas datas
 - [ ] Automação: subir o .xlsx no GitHub e uma Action gerar o `data.js` sozinha
-- [ ] Proteger o link com senha/SSO (se necessário — hoje o link é público para quem o tiver)
+- [x] Decisão: link aberto, sem senha (qualquer pessoa com o link acessa)
 - [ ] Segunda aba **Sheet1** (Reservas) como consulta adicional
 
 ## Pontos de atenção encontrados na planilha

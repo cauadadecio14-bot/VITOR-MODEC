@@ -1,5 +1,5 @@
 window.MATERIAIS = {
- "atualizadoEm": "2026-10-30T04:26:31.946Z",
+ "atualizadoEm": "2026-10-30T04:56:01.189Z",
  "registros": [
   {
    "codigo": "610000424529",
@@ -380,6 +380,16 @@ window.MATERIAIS = {
    "eta": "2026-09-22",
    "status": "Aguardando entrega",
    "tom": "espera"
+  },
+  {
+   "codigo": "610000160653",
+   "nome": "Cauã",
+   "qtd": "",
+   "pr": "",
+   "po": "",
+   "eta": "",
+   "status": "Sem status",
+   "tom": "neutro"
   }
  ]
 };

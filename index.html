@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Consulta de Materiais | Marinha</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topo">
+  <div class="topo__in">
+    <a class="marca" href="./" aria-label="MODEC">
+      <img class="marca__img" src="assets/logo-modec.png" alt="MODEC" hidden>
+      <span class="marca__txt">MODEC</span>
+    </a>
+    <div class="topo__titulo">
+      <h1>Consulta de Materiais</h1>
+      <p>Marinha · Follow up de PR / PO</p>
+    </div>
+  </div>
+</header>
+
+<main class="pagina">
+  <section class="busca" aria-labelledby="busca-titulo">
+    <h2 id="busca-titulo">Buscar material</h2>
+
+    <div class="modo" role="radiogroup" aria-label="Buscar por">
+      <button type="button" class="modo__op is-ativo" role="radio" aria-checked="true" data-modo="nome">Nome do material</button>
+      <button type="button" class="modo__op" role="radio" aria-checked="false" data-modo="codigo">Código</button>
+    </div>
+
+    <div class="campo">
+      <input id="entrada" type="text" autocomplete="off" spellcheck="false"
+             role="combobox" aria-expanded="false" aria-controls="lista" aria-autocomplete="list"
+             placeholder="Digite parte do nome do material…">
+      <button type="button" id="limpar" class="campo__limpar" aria-label="Limpar busca" hidden>×</button>
+      <ul id="lista" class="sugestoes" role="listbox" hidden></ul>
+    </div>
+    <p class="dica" id="dica"></p>
+  </section>
+
+  <section id="resultado" class="resultado" aria-live="polite"></section>
+</main>
+
+<footer class="rodape">
+  <span id="atualizado">—</span>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

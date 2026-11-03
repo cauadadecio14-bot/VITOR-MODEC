@@ -1,5 +1,5 @@
 window.MATERIAIS = {
- "atualizadoEm": "2026-11-03T13:49:08.194Z",
+ "atualizadoEm": "2026-11-03T14:29:40.935Z",
  "registros": [
   {
    "codigo": "610000424529",
@@ -390,6 +390,66 @@ window.MATERIAIS = {
    "eta": "2026-10-01",
    "status": "Aguardando entrega",
    "tom": "espera"
+  },
+  {
+   "codigo": "610000317838",
+   "nome": "ROPE, WIRE; 32MM; SC; 365M",
+   "qtd": "1",
+   "pr": "3000075594",
+   "po": "",
+   "eta": "",
+   "status": "Aguardando PO",
+   "tom": "alerta"
+  },
+  {
+   "codigo": "610000127209",
+   "nome": "PLANK, SCAF; AL; 1.5M",
+   "qtd": "50",
+   "pr": "",
+   "po": "",
+   "eta": "",
+   "status": "Concluído",
+   "tom": "ok"
+  },
+  {
+   "codigo": "610000392242",
+   "nome": "BASEBOARD; ADT; AL",
+   "qtd": "50",
+   "pr": "3000064837",
+   "po": "4500295363",
+   "eta": "2026-12-28",
+   "status": "Aguardando entrega",
+   "tom": "espera"
+  },
+  {
+   "codigo": "610000392218",
+   "nome": "BASEBOARD; ADT; AL",
+   "qtd": "50",
+   "pr": "3000064836",
+   "po": "4500295358",
+   "eta": "2026-12-28",
+   "status": "Aguardando entrega",
+   "tom": "espera"
+  },
+  {
+   "codigo": "620000053401",
+   "nome": "CABINET; 4",
+   "qtd": "1",
+   "pr": "1000255502",
+   "po": "",
+   "eta": "",
+   "status": "Aguardando PO",
+   "tom": "alerta"
+  },
+  {
+   "codigo": "610000072591",
+   "nome": "OIL ABSORBENT PADS",
+   "qtd": "20",
+   "pr": "",
+   "po": "",
+   "eta": "",
+   "status": "Bloqueado - usar 610000068010",
+   "tom": "neutro"
   },
   {
    "codigo": "",

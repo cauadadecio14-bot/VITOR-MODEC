@@ -1,5 +1,5 @@
 window.MATERIAIS = {
- "atualizadoEm": "2026-10-30T12:13:49.989Z",
+ "atualizadoEm": "2026-11-03T13:49:08.194Z",
  "registros": [
   {
    "codigo": "610000424529",
@@ -168,8 +168,8 @@ window.MATERIAIS = {
    "pr": "1000260598",
    "po": "4500295931",
    "eta": "2026-11-16",
-   "status": "Enviado a bordo",
-   "tom": "transito"
+   "status": "Concluído",
+   "tom": "ok"
   },
   {
    "codigo": "610000068010",
@@ -208,8 +208,8 @@ window.MATERIAIS = {
    "pr": "3000073837",
    "po": "5100022105",
    "eta": "2026-10-14",
-   "status": "Na base B13G",
-   "tom": "base"
+   "status": "Concluído",
+   "tom": "ok"
   },
   {
    "codigo": "610000491559",
@@ -217,7 +217,7 @@ window.MATERIAIS = {
    "qtd": "2",
    "pr": "3000077188",
    "po": "4500293927",
-   "eta": "",
+   "eta": "2026-12-18",
    "status": "Aguardando entrega",
    "tom": "espera"
   },
@@ -248,8 +248,8 @@ window.MATERIAIS = {
    "pr": "3000075597",
    "po": "4500293778",
    "eta": "2026-10-21",
-   "status": "Aguardando entrega",
-   "tom": "espera"
+   "status": "Na base B13G",
+   "tom": "base"
   },
   {
    "codigo": "610000338386",
@@ -268,8 +268,8 @@ window.MATERIAIS = {
    "pr": "3000073831",
    "po": "5100022040",
    "eta": "2026-10-13",
-   "status": "Aguardando entrega",
-   "tom": "espera"
+   "status": "Na base B13G",
+   "tom": "base"
   },
   {
    "codigo": "610000157076",
@@ -278,8 +278,8 @@ window.MATERIAIS = {
    "pr": "3000073835",
    "po": "5100022040",
    "eta": "2026-10-13",
-   "status": "Aguardando entrega",
-   "tom": "espera"
+   "status": "Na base B13G",
+   "tom": "base"
   },
   {
    "codigo": "610000232824",
@@ -318,8 +318,8 @@ window.MATERIAIS = {
    "pr": "3000073830",
    "po": "5100022040",
    "eta": "2026-10-13",
-   "status": "Aguardando entrega",
-   "tom": "espera"
+   "status": "Na base B13G",
+   "tom": "base"
   },
   {
    "codigo": "610000391948",
@@ -328,8 +328,8 @@ window.MATERIAIS = {
    "pr": "3000073838",
    "po": "5100022105",
    "eta": "2026-10-14",
-   "status": "Aguardando entrega",
-   "tom": "espera"
+   "status": "Concluído",
+   "tom": "ok"
   },
   {
    "codigo": "610000119715",
@@ -385,11 +385,21 @@ window.MATERIAIS = {
    "codigo": "610000061055",
    "nome": "FLARE SIGNAL, PYROTECH; RD; 40S; 300M",
    "qtd": "40",
-   "pr": "",
+   "pr": "3000076941",
    "po": "4500294494",
    "eta": "2026-10-01",
    "status": "Aguardando entrega",
    "tom": "espera"
+  },
+  {
+   "codigo": "",
+   "nome": "Consulta de Materiais | Marinha",
+   "qtd": "",
+   "pr": "",
+   "po": "",
+   "eta": "",
+   "status": "Sem status",
+   "tom": "neutro"
   }
  ]
 };

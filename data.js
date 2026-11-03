@@ -1,5 +1,5 @@
 window.MATERIAIS = {
- "atualizadoEm": "2026-11-03T14:29:40.935Z",
+ "atualizadoEm": "2026-11-03T14:50:31.903Z",
  "registros": [
   {
    "codigo": "610000424529",
@@ -450,6 +450,16 @@ window.MATERIAIS = {
    "eta": "",
    "status": "Bloqueado - usar 610000068010",
    "tom": "neutro"
+  },
+  {
+   "codigo": "620000028536",
+   "nome": "SERRAGEM; MAD; SACO 10KG",
+   "qtd": "50",
+   "pr": "1000260598",
+   "po": "4500295931",
+   "eta": "2026-11-16",
+   "status": "Concluído",
+   "tom": "ok"
   },
   {
    "codigo": "",

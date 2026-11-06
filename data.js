@@ -1,5 +1,5 @@
 window.MATERIAIS = {
- "atualizadoEm": "2026-11-03T14:50:31.903Z",
+ "atualizadoEm": "2026-11-06T12:08:59.800Z",
  "registros": [
   {
    "codigo": "610000424529",
@@ -198,8 +198,8 @@ window.MATERIAIS = {
    "pr": "3000077187",
    "po": "4500294682",
    "eta": "2026-09-22",
-   "status": "Aguardando entrega",
-   "tom": "espera"
+   "status": "Na base B13G",
+   "tom": "base"
   },
   {
    "codigo": "610000331177",
@@ -460,6 +460,56 @@ window.MATERIAIS = {
    "eta": "2026-11-16",
    "status": "Concluído",
    "tom": "ok"
+  },
+  {
+   "codigo": "610000469597",
+   "nome": "ESFREGAO; PONTA LOOP; CO PES; BR",
+   "qtd": "2",
+   "pr": "3000081493",
+   "po": "",
+   "eta": "",
+   "status": "Aguardando PO",
+   "tom": "alerta"
+  },
+  {
+   "codigo": "610000065451",
+   "nome": "TRAPO; CO; BR",
+   "qtd": "5",
+   "pr": "3000081483",
+   "po": "",
+   "eta": "",
+   "status": "Aguardando PO",
+   "tom": "alerta"
+  },
+  {
+   "codigo": "610000087862",
+   "nome": "TRAPO; ALGODAO; COL; SC 20KG",
+   "qtd": "5",
+   "pr": "",
+   "po": "",
+   "eta": "",
+   "status": "Sem status",
+   "tom": "neutro"
+  },
+  {
+   "codigo": "610000066295",
+   "nome": "ADAPTADOR; PMLN6803 MOTOROLA",
+   "qtd": "7",
+   "pr": "3000081484",
+   "po": "",
+   "eta": "",
+   "status": "Aguardando PO",
+   "tom": "alerta"
+  },
+  {
+   "codigo": "610000314537",
+   "nome": "CORDA; TRANC; CO; ROL; 20MM",
+   "qtd": "1",
+   "pr": "3000081492",
+   "po": "",
+   "eta": "",
+   "status": "Aguardando PO",
+   "tom": "alerta"
   },
   {
    "codigo": "",
